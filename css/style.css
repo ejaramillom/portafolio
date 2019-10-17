@@ -151,6 +151,21 @@ audio,
   height: 250px;
 }
 
+.floatContainer {
+  position: absolute;
+  top: 150px;
+  left: 650px;
+  width: 600px;
+  height: 500px;
+}
+
+.nameFloat{
+  position: relative;
+  width: 600px;
+  height: 120px;
+  font-size: 32px;
+}
+
 i {
   margin-right: 20px;
   color: #00122C
@@ -394,8 +409,8 @@ i {
   position:relative;
   text-align:center;
   line-height:50px;
-  width:100px;
-  height:100px;
+  width:60px;
+  height:60px;
   font-size:40px;
   margin:0 auto;
   margin-top:80px;
@@ -412,7 +427,7 @@ i {
   height:40px;
   width:10px;
   top:32px;
-  left:-4px;
+  left:50px;
   line-height:10px;
   font-size:40px;
   font-weight:700;
@@ -439,7 +454,7 @@ i {
   height:40px;
   width:10px;
   top:32px;
-  right:-4px;
+  right:50px;
   line-height:10px;
   font-size:40px;
   font-weight:700;
