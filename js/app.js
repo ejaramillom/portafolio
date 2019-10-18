@@ -106,8 +106,12 @@ Function Page Load
 					$('body').waitForImages({
 						finished: function() {
 							TweenMax.to($("#header-container, #footer-container"), 1, {force3D:true, opacity:1, delay:0.3, ease:Power2.easeOut});
-              var tl = new TimelineMax({repeat:-1, repeatDelay:1, yoyo: true});
-							  tl.to($(".nameFloat"), 2, {force3D:true, opacity:0, delay:3, ease:Power2.easeOut});
+              var tl = new TimelineMax({repeat:-1, repeatDelay:0.5, yoyo: true});
+							  tl.to($("#nfOne"), 1, {force3D:true, opacity:0, delay:2.5, ease:Power2.easeOut});
+								tl.to($("#nfTwo"), 1.5, {force3D:true, opacity:0, delay:0.7, ease:Power1.easeIn});
+								tl.to($("#nfThree"), 0.7, {force3D:true, opacity:0, delay:0.5, ease:Bounce.easeOut});
+								tl.to($("#nfFour"), 0.5, {force3D:true, opacity:0, delay:0.3, ease:Sine.easeOut});
+
 							$('body').removeClass('hidden-ball');
 						},
 						waitForAll: true
