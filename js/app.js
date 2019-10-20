@@ -32,7 +32,6 @@ $(".personal").on({
 	}
 });
 
-
 function repeatOne() {
 var el = document.getElementsByClassName("nameFloat");
 var tl = new TimelineMax();
@@ -105,7 +104,6 @@ Function Page Load
 
 					$('body').waitForImages({
 						finished: function() {
-							TweenMax.to($("#header-container, #footer-container"), 1, {force3D:true, opacity:1, delay:0.3, ease:Power2.easeOut});
               var tl = new TimelineMax({repeat:-1, repeatDelay:0.5, yoyo: true});
 							  tl.to($("#nfOne"), 1, {force3D:true, opacity:0, delay:2.5, ease:Power2.easeOut});
 								tl.to($("#nfTwo"), 1.5, {force3D:true, opacity:0, delay:0.7, ease:Power1.easeIn});
@@ -116,14 +114,6 @@ Function Page Load
 						},
 						waitForAll: true
 					});
-
-					setTimeout( function(){
-						$('body').removeClass("load-project-page");
-					} , 600 );
-
-					setTimeout( function(){
-						$('body').removeClass("show-loader")
-					} , 800 );
 
 				} , 100 );
 			},
@@ -525,13 +515,13 @@ Function Lazy Load
 			} , 600 );
 		}
 
-		// Fading In Small Carousel elements on Finised
+		// Fading In Small Carousel elements on Finished
 		var tlCarousel = new TimelineLite();
 		tlCarousel.set($("#showcase-carousel .swiper-slide"), {x: 300, opacity:0});
 		$("#showcase-carousel .swiper-slide").each(function(index, element) {
 			tlCarousel.to(element, 1.4, {x:0, opacity:1, delay:0.7, ease:Power3.easeOut}, index * 0.1)
 		});
-		// Fading In Large Carousel elements on Finised
+		// Fading In Large Carousel elements on Finished
 		var tlCarousel = new TimelineLite();
 		tlCarousel.set($("#large-showcase-carousel .swiper-slide"), {x: 300, opacity:0});
 		$("#large-showcase-carousel .swiper-slide").each(function(index, element) {
