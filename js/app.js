@@ -563,7 +563,6 @@ Function Lazy Load
 			$('#showcase-holder').removeClass("disabled");
 		} , 1900 );
 
-
 		if ($('body').hasClass('mute')) {
 			$(".icon-wrap").addClass("disabled");
 			$('.button-text span').text($('.button-text span').data('off'));
