@@ -21,8 +21,8 @@ body {
   font-family: 'Dosis', sans-serif;
   overflow: hidden;
   overflow-y:scroll;
-  -webkit-transition: opacity 0.2s ease-in-out 0.2s;
-  transition: opacity 0.2s ease-in-out 0.2s;
+  -webkit-transition: opacity 0.4s ease-in-out 0.4s;
+  transition: opacity 0.4s ease-in-out 0.4s;
 }
 
 body.smooth-scroll {
@@ -33,7 +33,26 @@ body.hidden {
   opacity:0;
 }
 
-audio {
+.audio {
+  font-family: 'Dosis', sans-serif;
+  -webkit-transition: opacity 0.4s ease-in-out 0.4s;
+  transition: opacity 0.4s ease-in-out 0.4s;
+  font-weight: 700;
+  font-size: 3vh;
+}
+
+.central {
+  text-align: center;
+  background-position: center;
+}
+
+.btn-primary{
+  background-color: #06a0fd;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
 }
 
 .clear {
@@ -45,76 +64,83 @@ audio {
   color: #0C2C56;
   opacity:1;
   font-weight: 700;
-  font-size: 300%;
+  font-size: 12vh;
 }
 
 .personal {
-  height: 100%;
+  display: inline-block;
+  height: 80vh;
   width: 100%;
   background: url(images/main.jpg);
   background-size: cover;
-  background-position: center center;
-  -webkit-clip-path: polygon(20% 0, 100% 10%, 70% 100%, 0 90%);
-  clip-path: polygon(20% 0, 100% 10%, 70% 100%, 0 90%);
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  -webkit-clip-path: polygon(44% 0, 100% 5%, 97% 100%, 3% 97%, 0 4%);
+  clip-path: polygon(44% 0, 100% 5%, 97% 100%, 3% 97%, 0 4%);
 }
 
 .rightButton {
+  display: inline-block;
   cursor: pointer;
-  font-size: 60%;
-  height: 100%;
+  height: 80vh;
   width: 100%;
   background: #0C2C56; /*azul claro*/
-  background-size: cover;
-  -webkit-clip-path: polygon(76% 0, 100% 39%, 83% 100%, 62% 84%);
-  clip-path: polygon(76% 0, 100% 39%, 83% 100%, 62% 84%);
+  -webkit-clip-path: polygon(36% 0, 97% 6%, 100% 91%, 63% 100%, 0 93%, 2% 8%);
+  clip-path: polygon(36% 0, 97% 6%, 100% 91%, 63% 100%, 0 93%, 2% 8%);
 }
 
 .leftButton {
+  display: inline-block;
   cursor: pointer;
-  font-size: 60%;
-  height: 100%;
+  height: 80vh;
   width: 100%;
   background: #06417D; /*blue*/
-  background-size: cover;
-  -webkit-clip-path: polygon(10% 14%, 34% 0, 18% 94%, 0 100%);
-  clip-path: polygon(10% 14%, 34% 0, 18% 94%, 0 100%);
+  -webkit-clip-path: polygon(30% 3%, 80% 0%, 93% 23%, 100% 65%, 83% 98%, 38% 100%, 4% 85%, 0 33%);
+  clip-path: polygon(30% 3%, 80% 0%, 93% 23%, 100% 65%, 83% 98%, 38% 100%, 4% 85%, 0 33%);;
 }
 
 .bottomButton {
-  font-size: 20%;
+  display: inline;
+  width: 50vw;
+  height: 20vh;
+  font-size: 10vh;
+  text-align: center;
 }
 
 .floatContainer {
+    text-align: center;
+    display: inline-block;
 }
 
 .floatContainer > .nameFloat{
-  font-size: 10%;
+  font-size: 5vh;
   text-align: center;
 }
 
 .floatContainer > a {
-  font-size: 50%;
+  font-size: 5vh;
   text-align: center;
-  margin: auto;
-
 }
 
 i {
-  margin-right: 10%;
+  text-align: center;
+  margin-right: 5%;
   color: #00122C
-
 }
 
 .leftButton p {
+  font-size: 25vh;
+  display: block;
   color: #fff;
-  transform: rotate(-80deg);
-
+  transform: matrix(0.1, -0.5, 0.5, 0.1, -10, 200);
 }
 
 .rightButton p {
+  display: block;
+  font-size: 25vh;
   color: #fff;
-  transform: rotate(-80deg);
-
+  transform: matrix(0.1, -0.5, 0.5, 0.1, -5, 200);
 }
 
 /*--------------------------------------------------
@@ -149,149 +175,75 @@ i {
 	box-sizing:border-box;
 }
 
-.mfp-zoom-out-cur #ball {
-	opacity:0;
-	-webkit-transition: opacity 0.2s ease-in-out 0s;
-	transition: opacity 0.2s ease-in-out 0s;
-}
-
-.light-content #ball,  #ball.with-icon {
-	border: 2px solid #000;
-	border-color:#000!important;
-}
-
-#ball:before {
-	font-family: FontAwesome;
-	content: "\f053";
-	font-size:6px;
-	width:4px;
-	height:8px;
-	line-height:8px;
-	text-align:center;
-	position:absolute;
-	left:-12px;
-	top:9px;
-	color:#000;
-	opacity:0;
-	transition: all 0.1s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
-}
-
-.light-content #ball:before {
-	color:#fff;
-}
-
-#ball:after {
-	font-family: FontAwesome;
-	content: "\f054";
-	font-size:6px;
-	width:4px;
-	height:8px;
-	line-height:8px;
-	text-align:center;
-	position:absolute;
-	right:-10px;
-	top:9px;
-	color:#000;
-	opacity:0;
-	transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
-}
-
-.light-content #ball:before, .light-content #ball:after {
-	color:#fff;
-}
-
-.scale-up #ball:before, .scale-up #ball:after {
-	opacity:1;
-	transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
-}
-
-.scale-up.scale-none #ball:before, .scale-up.scale-none #ball:after {
-	opacity:0;
-}
-
-@keyframes rotating {
-    0% {
-	-webkit-transform: translate(-7px, -7px) rotate(0deg);
-	transform:  translate(-7px, -7px) rotate(0deg);
-    }
-
-  95% {
-      -webkit-transform:  translate(-7px, -7px) rotate(350deg);
-	transform:  translate(-7px, -7px) rotate(350deg);
-    }
-
-    100% {
-      -webkit-transform:  translate(-7px, -7px) rotate(360deg);
-	transform:  translate(-7px, -7px) rotate(360deg);
-    }
-}
-
 /*--------------------------------------------------
 	03. Page preloader
 ---------------------------------------------------*/
 .preloader-wrap {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   position: absolute;
   background: #fff;
   z-index : 99999999;
 }
 
 .headphones {
-  width: 100px;
-  height: 100px;
-  font-size: 50px;
+  width: 12vw;
+  height: 20vh;
   background-image:url(images/guitar.gif);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 20vh;
+  z-index : 1;
 }
 
 .headphones:before {
   content:"(";
-  position:absolute;
+  font-size: 10vh;
+  position:relative;
   z-index: 99999;
   font-weight:700;
   color:#000;
-  -webkit-animation: movebefore 0.8s ease-out infinite;
-  animation: movebefore 0.8s ease-out infinite;
+  -webkit-animation: movebefore 2s ease-out infinite;
+  animation: movebefore 2s ease-out infinite;
 
 }
 
 @keyframes movebefore {
   0% {
-  left:-6px;
+  left:-4vw;
   opacity:1;
   }
 
   100% {
-  left:-12px;
+  left:-8vw;
   opacity:0
   }
 }
 
 .headphones:after {
   content:")";
+  font-size: 10vh;
   z-index: 99999;
-  position:absolute;
+  position:relative;
   font-weight:700;
   color:#000;
-  -webkit-animation: moveafter 0.8s ease-out infinite;
-  animation: moveafter 0.8s ease-out infinite;
+  -webkit-animation: moveafter 2s ease-out infinite;
+  animation: moveafter 2s ease-out infinite;
 
 }
 
 @keyframes moveafter {
   0% {
-  right:-6px;
+  right:-4vw;
   opacity:1;
   }
 
   100% {
-  right:-12px;
+  right:-8vw;
   opacity:0
   }
 }
 
 .headphones-text{
   color: #000;
+  font-size: 6vh;
 }
