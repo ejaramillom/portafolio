@@ -8,12 +8,14 @@
     clear: both; }
 
 html {
-  font-family: sans-serif;
+  font-family: 'Dosis', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
 
 body {
-  margin: 0; }
+  margin: 0;
+  font-family: 'Dosis', sans-serif;
+}
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block; }
@@ -32,6 +34,12 @@ audio:not([controls]) {
 a {
   background-color: transparent; }
 
+.title{
+  color: #fff;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  font-weight: 800;
+}
+
 a:active, a:hover {
   outline: 0; }
 
@@ -45,7 +53,7 @@ dfn {
   font-style: italic; }
 
 h1 {
-  font-size: 2em;
+  font-size: 3em;
   margin: .67em 0; }
 
 mark {
@@ -84,7 +92,7 @@ pre {
   overflow: auto; }
 
 code, kbd, pre, samp {
-  font-family: monospace,monospace;
+  font-family: 'Dosis', sans-serif;
   font-size: 1em; }
 
 button, input, optgroup, select, textarea {
@@ -204,9 +212,9 @@ html, body {
   margin: 0; }
 
 h1 {
-  font-size: 2em;
+  font-size: 3em;
   margin-top: 0;
-  font-family: 'Roboto Condensed', Helvetica, Helvetica Neue, Arial, sans-serif;
+  font-family: 'Dosis', sans-serif;
   font-weight: 700; }
 
 /* ==========================================================================
@@ -215,7 +223,9 @@ h1 {
 /* =Header */
 .header-container {
   text-align: center;
-  color: #ffffff; }
+  color: #ffffff;
+}
+
   .header-container .wrapper {
     padding-top: 120px;
     z-index: 2;
@@ -230,15 +240,15 @@ h1 {
   width: 100%;
   height: 100%;
   z-index: 1;
-  opacity: 0.5; }
+  opacity: 1; }
   .header-container .bcg {
     background-image: url(../css/images/img1.jpg);
     background-size: cover; }
   #slide01 .bcg {
-    background: url(../css/images/img5.jpg) no-repeat center center;
+    background: url(../css/images/img10.jpg) no-repeat center center;
     background-size: cover; }
   #slide02 .bcg {
-    background: url(../css/images/img3.jpg) no-repeat center center;
+    background: url(../css/images/img7.jpg) no-repeat center center;
     background-size: cover; }
   #slide03 .bcg {
     background: url(../css/images/img4.jpg) no-repeat center center;
@@ -285,7 +295,7 @@ nav {
             transition: all 0.3s linear; }
   nav .nav-label {
     display: block;
-    opacity: 0.5;
+    opacity: 1;
     visibility: hidden;
     -webkit-transform: translateX(-10px);
         -ms-transform: translateX(-10px);
@@ -308,7 +318,7 @@ nav {
     list-style: none; }
 
 .scroll-hint {
-  color: #212121;
+  color: #fff;
   position: absolute;
   bottom: 30px;
   left: 50%;
@@ -316,19 +326,25 @@ nav {
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   padding: 10px 40px;
-  border: 3px #ffffff solid;
+  border: 3px #006dd2 solid;
   font-size: 13px;
-  font-weight: bold;
-  font-family: 'Roboto Condensed', Helvetica, Helvetica Neue, Arial, sans-serif;
-  background-color: rgba(255, 255, 255, 0.9);
+  font-weight: 700;
+  font-family: 'Dosis', sans-serif;
+  background-color: #006dd2;
   z-index: 2; }
 
 /* =Main */
 p {
-  font-size: 16px; }
+  font-size: 18px;
+  font-weight: 500;
+}
 
 .fs {
   height: 100vh; }
+
+.imgIcon{
+  height: 35px;
+}
 
 .slide {
   color: #ffffff;
@@ -372,7 +388,7 @@ p {
 
 /* =Content Block */
 .content-block {
-  background-color: #212121;
+  background-color: #025195;
   color: rgba(255, 255, 255, 0.9); }
   .content-block .wrapper {
     padding: 30px 0;
@@ -432,7 +448,7 @@ p {
   h1 {
     font-size: 3em; }
   p {
-    font-size: 20px; }
+    font-size: 25px; }
   /* =Header */
   .header-container {
     overflow: hidden;
@@ -471,7 +487,7 @@ p {
     .slide#slide01, .slide#slide02, .slide#slide03 {
       color: #212121; }
       .slide#slide01 .wrapper, .slide#slide02 .wrapper, .slide#slide03 .wrapper {
-        top: 20%;
+        top: 40%;
         text-align: center; }
       .slide#slide01 section, .slide#slide02 section, .slide#slide03 section {
         margin: 0 auto; }
@@ -481,7 +497,7 @@ p {
       color: #ffffff; }
       .slide#slide02 .wrapper {
         top: auto;
-        bottom: 40%;
+        bottom: 20%;
         left: 10%;
         text-align: left;
         -webkit-transform: translate(0);
