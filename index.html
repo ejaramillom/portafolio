@@ -50,8 +50,12 @@
               <p class="nameFloat" id="nfFour">Let's work together!</p>
               <p class="nameFloat" >E-mail me <a href="mailto:ejaramilo@hotmail.com" target=“_blank”><i class="fa fa-envelope" data-tilt data-tilt-scale="1.2"> </i></a> </p>
               <div class="btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-primary active audio">
-                  <input type="checkbox" checked autocomplete="off"> Music (Turn me off!)
+                <label class="btn btn-primary active audio  justify-content-center central align-center">
+                  <input id="audioToggle" type="checkbox" checked autocomplete="off"> Music!
+                  <embed src="https://s3-eu-west-1.amazonaws.com/omegasquadron.neilbryson.net/silence.mp3" type="audio/mp3" autostart="true" hidden="true">
+                  <audio id="mainAudio" autoplay controls>
+                    <source src="css/music/fantasy.mp3" type="audio/mp3">
+                  </audio>
                 </label>
               </div>
             </div>

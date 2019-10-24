@@ -104,7 +104,7 @@ body.hidden {
   display: inline;
   width: 50vw;
   height: 20vh;
-  font-size: 10vh;
+  font-size: 1em;
   text-align: center;
 }
 
@@ -114,12 +114,12 @@ body.hidden {
 }
 
 .floatContainer > .nameFloat{
-  font-size: 5vh;
+  font-size: 7vmin;
   text-align: center;
 }
 
 .floatContainer > a {
-  font-size: 5vh;
+  font-size: 7vmin;
   text-align: center;
 }
 
@@ -130,7 +130,7 @@ i {
 }
 
 .leftButton p {
-  font-size: 25vh;
+  font-size: 25vmin;
   display: block;
   color: #fff;
   transform: matrix(0.1, -0.5, 0.5, 0.1, -10, 200);
@@ -138,7 +138,7 @@ i {
 
 .rightButton p {
   display: block;
-  font-size: 25vh;
+  font-size: 25vmin;
   color: #fff;
   transform: matrix(0.1, -0.5, 0.5, 0.1, -5, 200);
 }
@@ -187,18 +187,18 @@ i {
 }
 
 .headphones {
-  width: 18vw;
+  width: 24vw;
   height: 20vh;
   background-image:url(images/guitar.gif);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 15vh;
+  background-size: 14vw;
   z-index : 1;
 }
 
 .headphones:before {
   content:"(";
-  font-size: 10vh;
+  font-size: 10vmin;
   position:relative;
   z-index: 99999;
   font-weight:700;
@@ -246,5 +246,261 @@ i {
 
 .headphones-text{
   color: #000;
-  font-size: 6vh;
+  font-size: 6vmin;
+}
+
+
+/* ------------Responsive---------------------- */
+/* Extra small devices (phones, 576px and down) */
+@media only screen and (max-width: 576px) {
+
+  .headphones-text{
+    font-size: 30px;
+  }
+
+  .headphones:after {
+    font-size: 60px;
+  }
+
+  .headphones:before {
+    font-size: 60px;
+  }
+
+  .headphones {
+    background-size: 40px;
+  }
+
+  .leftButton p {
+    font-size: 120px;
+    transform: matrix(0.1, -0.5, 0.5, 0.1, -10, 150);
+  }
+
+  .rightButton p {
+    font-size: 120px;
+    transform: matrix(0.1, -0.5, 0.5, 0.1, -5, 150);
+  }
+
+  .floatContainer > .nameFloat{
+    font-size: 25px;
+  }
+
+  .floatContainer > a {
+    font-size: 25px;
+  }
+
+  .bottomButton {
+    font-size: 40px;
+  }
+
+  .audio {
+    font-size: 20px;
+  }
+
+  .percentage {
+    font-size: 40px;
+  }
+
+}
+
+/* Small devices (portrait tablets and large phones, 576px and up) */
+@media only screen and (min-width: 576px) {
+
+  #mainAudio {
+    width: 60px;
+    height:30px;
+  }
+  .headphones-text{
+    font-size: 40px;
+  }
+
+  .headphones:after {
+    font-size: 80px;
+  }
+
+  .headphones:before {
+    font-size: 80px;
+  }
+
+  .headphones {
+    background-size: 60px;
+  }
+
+  .leftButton p {
+    font-size: 70px;
+  }
+
+  .rightButton p {
+    font-size: 70px;
+  }
+
+  .floatContainer > .nameFloat{
+    font-size: 17px;
+  }
+
+  .floatContainer > a {
+    font-size: 17px;
+  }
+
+  .bottomButton {
+    font-size: 50px;
+  }
+
+  .audio {
+    font-size: 17px;
+  }
+
+  .percentage {
+    font-size: 60px;
+  }
+
+  }
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .headphones-text{
+    font-size: 40px;
+  }
+
+  .headphones:after {
+    font-size: 80px;
+  }
+
+  .headphones:before {
+    font-size: 80px;
+  }
+
+  .headphones {
+    background-size: 90px;
+  }
+
+  .leftButton p {
+    font-size: 80px;
+  }
+
+  .rightButton p {
+    font-size: 80px;
+  }
+
+  .floatContainer > .nameFloat{
+    font-size: 20px;
+  }
+
+  .floatContainer > a {
+    font-size: 20px;
+  }
+
+  .bottomButton {
+    font-size: 40px;
+  }
+
+  .audio {
+    font-size: 15px;
+  }
+
+  .percentage {
+    font-size: 60px;
+  }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+  .headphones-text{
+    font-size: 60px;
+  }
+
+  .headphones:after {
+    font-size: 100px;
+  }
+
+  .headphones:before {
+    font-size: 100px;
+  }
+
+  .headphones {
+    background-size: 110px;
+  }
+
+  .leftButton p {
+    font-size: 140px;
+    transform: matrix(0.1, -0.5, 0.5, 0.1, -10, 250);
+  }
+
+  .rightButton p {
+    font-size: 140px;
+    transform: matrix(0.1, -0.5, 0.5, 0.1, -5, 250);
+  }
+
+
+  .floatContainer > .nameFloat{
+    font-size: 25px;
+  }
+
+  .floatContainer > a {
+    font-size: 25px;
+  }
+
+  .bottomButton {
+    font-size: 60px;
+  }
+
+  .audio {
+    font-size: 25px;
+  }
+
+  .percentage {
+    font-size: 80px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .headphones-text{
+    font-size: 60px;
+  }
+
+  .headphones:after {
+    font-size: 100px;
+  }
+
+  .headphones:before {
+    font-size: 100px;
+  }
+
+  .headphones {
+    background-size: 110px;
+  }
+
+  .leftButton p {
+    font-size: 160px;
+    transform: matrix(0.1, -0.5, 0.5, 0.1, -10, 250);
+  }
+
+  .rightButton p {
+    font-size: 160px;
+    transform: matrix(0.1, -0.5, 0.5, 0.1, -5, 250);
+  }
+
+
+  .floatContainer > .nameFloat{
+    font-size: 30px;
+  }
+
+  .floatContainer > a {
+    font-size: 30px;
+  }
+
+  .bottomButton {
+    font-size: 60px;
+  }
+
+  .audio {
+    font-size: 25px;
+  }
+
+  .percentage {
+    font-size: 80px;
+  }
+
 }
