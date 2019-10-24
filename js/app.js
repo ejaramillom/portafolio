@@ -32,12 +32,15 @@ $(".personal").on({
 	}
 });
 
+/*--------------------------------------------------
+Function repeat floating
+---------------------------------------------------*/
 function repeatOne() {
-var el = document.getElementsByClassName("nameFloat");
-var tl = new TimelineMax();
+	var el = document.getElementsByClassName("nameFloat");
+	var tl = new TimelineMax();
 
-tl.to(el, 0, {alpha:0, repeatDelay:1, repeat:-1, yoyo:true})
-tl.play();
+	tl.to(el, 0, {alpha:0, repeatDelay:1, repeat:-1, yoyo:true})
+	tl.play();
 };
 
 /*--------------------------------------------------
@@ -50,7 +53,7 @@ Function Page Load
 			$('.preloader-wrap').addClass("light-content");
 		}
 
-		$("body").removeClass("hidden");
+				$("body").removeClass("hidden");
 
 		var width = 100,
 			perfData = window.performance.timing,
@@ -88,9 +91,6 @@ Function Page Load
 
 		// Fading Out Loadbar on Finished
 		setTimeout(function(){
-			$('body').append('<audio loop autoplay volume="0" id="audio"><source src="https://b922bde52f23a8481830-83cb7d8d544f653b52d1a1621f05ea9d.ssl.cf3.rackcdn.com/audio/MASTERqwav.mp3" type="audio/mpeg" /></audio>');
-			var audio = document.getElementById("audio");
-			audio.volume = 0.3;
 
 			$('body').waitForImages({
 				finished: function() {
